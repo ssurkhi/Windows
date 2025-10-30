@@ -176,7 +176,7 @@ foreach ($ep in $allEndpoints) {
         $tcp = Test-Tcp443 -HostName $ep
         $https = Test-Https -HostName $ep
     } else {
-        Write-Log "DNS failed for $ep: $($dns.Error)" "WARN"
+        Write-Log "DNS failed for $ep- $($dns.Error)" "WARN"
     }
 
     $overall =
